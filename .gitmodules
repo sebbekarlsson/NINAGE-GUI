@@ -1,0 +1,6 @@
+[submodule "src/lib/Jinja2CppLight"]
+	path = src/lib/Jinja2CppLight
+	url = https://github.com/hughperkins/Jinja2CppLight.git
+[submodule "src/lib/ResourceManager"]
+	path = src/lib/ResourceManager
+	url = git@github.com:sebbekarlsson/ResourceManager.git
