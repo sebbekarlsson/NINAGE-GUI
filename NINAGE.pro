@@ -7,9 +7,12 @@ TARGET = NINAGE.out
 TEMPLATE = app
 
 SOURCES += src/main.cpp
+
+SOURCES += ./src/lib/ResourceManager/ResourceManager.h
 SOURCES += ./src/lib/ResourceManager/ResourceManager.cpp
-SOURCES += ./src/MainWindow.cpp
-SOURCES += ./src/NewProjectWindow.cpp
 
 HEADERS += ./src/include/MainWindow.h
+SOURCES += ./src/MainWindow.cpp
+
 HEADERS += ./src/include/NewProjectWindow.h
+SOURCES += ./src/NewProjectWindow.cpp
