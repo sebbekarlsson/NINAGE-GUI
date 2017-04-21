@@ -17,10 +17,16 @@ class NewProjectWindow : public QMainWindow {
 
         private slots:
             void create();
+            void selectLocation();
 
     private:
         void createActions();
 
         QAction *createAct;
+        QLineEdit *projectName;
+        QLineEdit *projectLocationText;
+        QPushButton *selectProjectLocationButton;
+        QPushButton *createButton;
+
 };
 #endif
