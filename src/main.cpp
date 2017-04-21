@@ -2,8 +2,11 @@
 #include <QFileInfo>
 #include <string>
 #include "lib/ResourceManager/ResourceManager.h"
-#include "MainWindow.h"
+#include "include/MainWindow.h"
 
+
+bool hasProject = false;
+std::string projectLocation = "";
 
 QUrl getAbsPath(std::string path) {
     return QUrl::fromLocalFile(

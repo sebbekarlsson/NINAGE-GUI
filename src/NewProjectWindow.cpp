@@ -1,6 +1,9 @@
 #include "include/NewProjectWindow.h"
 
 
+extern bool hasProject;
+extern std::string projectLocation;
+
 NewProjectWindow::NewProjectWindow() {
     int scale = 1;
     int width = (640) * scale;
@@ -61,5 +64,17 @@ void NewProjectWindow::selectLocation() {
 }
 
 void NewProjectWindow::create() {
-    QMessageBox::warning(this, "Error", "Not Implemented");
+    if (this->projectName->text().toStdString() == "") {
+        QMessageBox::warning(this, "Error", "Project name cannot be empty!");
+        
+        return;
+    }
+    
+    hasProject = true;
+    projectLocation = this->projectLocationText->text().toStdString() + 
+        "/" + this->projectName->text().toStdString();
+
+    mkdir(projectLocation.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+
+    this->close();
 }

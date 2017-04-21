@@ -7,6 +7,9 @@
 #include <QMainWindow>
 #include <QTextEdit>
 #include <QListWidget>
+#include <dirent.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 
 
 class NewProjectWindow : public QMainWindow {
