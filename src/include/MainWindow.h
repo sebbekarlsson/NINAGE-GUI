@@ -16,12 +16,14 @@ class MainWindow : public QMainWindow {
 
         private slots:
             void newFile();
+            void openProject();
 
     private:
         void createActions();
         void createMenus();
 
         QMenu *fileMenu;
-        QAction *newAct;
+        QAction *file_newAct;
+        QAction *file_openAct;
 };
 #endif

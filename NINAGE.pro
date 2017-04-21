@@ -10,4 +10,4 @@ SOURCES += src/main.cpp
 SOURCES += ./src/lib/ResourceManager/ResourceManager.cpp
 SOURCES += ./src/MainWindow.cpp
 
-HEADERS += ./src/MainWindow.h
+HEADERS += ./src/include/MainWindow.h

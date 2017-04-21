@@ -1,4 +1,4 @@
-#include "MainWindow.h"
+#include "include/MainWindow.h"
 
 
 MainWindow::MainWindow() {
@@ -17,18 +17,29 @@ MainWindow::MainWindow() {
 
 void MainWindow::createMenus() {
     fileMenu = menuBar()->addMenu(tr("&File"));
-    fileMenu->addAction(newAct);
+    fileMenu->addAction(file_newAct);
+    fileMenu->addAction(file_openAct);
 }
 
 void MainWindow::createActions() {
-    newAct = new QAction(tr("&New"), this);
+    file_newAct = new QAction(tr("&New"), this);
     
-    newAct->setShortcuts(QKeySequence::New);
-    newAct->setStatusTip(tr("Create a new file"));
+    file_newAct->setShortcuts(QKeySequence::New);
+    file_newAct->setStatusTip(tr("Create a new project"));
 
-    connect(newAct, &QAction::triggered, this, &MainWindow::newFile);
+    connect(file_newAct, &QAction::triggered, this, &MainWindow::newFile);
+    
+    file_openAct = new QAction(tr("&Open"), this);
+
+    file_openAct->setStatusTip(tr("Open existing project"));
+
+    connect(file_openAct, &QAction::triggered, this, &MainWindow::openProject);
 }
 
 void MainWindow::newFile() {
+    QMessageBox::warning(this, tr("Error"), tr("Not Implemented"));
+}
+
+void MainWindow::openProject() {
     QMessageBox::warning(this, tr("Error"), tr("Not Implemented"));
 }
