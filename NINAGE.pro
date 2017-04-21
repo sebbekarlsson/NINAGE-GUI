@@ -9,5 +9,7 @@ TEMPLATE = app
 SOURCES += src/main.cpp
 SOURCES += ./src/lib/ResourceManager/ResourceManager.cpp
 SOURCES += ./src/MainWindow.cpp
+SOURCES += ./src/NewProjectWindow.cpp
 
 HEADERS += ./src/include/MainWindow.h
+HEADERS += ./src/include/NewProjectWindow.h

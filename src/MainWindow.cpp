@@ -1,4 +1,5 @@
 #include "include/MainWindow.h"
+#include "include/NewProjectWindow.h"
 
 
 MainWindow::MainWindow() {
@@ -37,7 +38,8 @@ void MainWindow::createActions() {
 }
 
 void MainWindow::newFile() {
-    QMessageBox::warning(this, tr("Error"), tr("Not Implemented"));
+    NewProjectWindow * win = new NewProjectWindow();
+    win->show();
 }
 
 void MainWindow::openProject() {
