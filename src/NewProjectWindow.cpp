@@ -50,12 +50,14 @@ void NewProjectWindow::createActions() {
 }
 
 void NewProjectWindow::selectLocation() {
-QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
-                                             "/home",
-                                             QFileDialog::ShowDirsOnly
-                                             | QFileDialog::DontResolveSymlinks);
+    QString dir = QFileDialog::getExistingDirectory(
+        this,
+        tr("Open Directory"),
+        "/home",
+        QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks
+    );
 
-this->projectLocationText->setText(dir);
+    this->projectLocationText->setText(dir);
 }
 
 void NewProjectWindow::create() {
