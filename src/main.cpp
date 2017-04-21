@@ -16,6 +16,7 @@ int main(int argc, char *argv[]) {
 
     MainWindow * mainwin = new MainWindow();
 
+    //mainwin->windowHandle()->showFullScreen();
     mainwin->show();
 
     return a.exec();

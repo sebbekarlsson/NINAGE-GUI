@@ -2,6 +2,12 @@
 
 
 MainWindow::MainWindow() {
+    int scale = 1;
+    int width = (640) * scale;
+    int height = (width / 16 * 9) * scale;
+    
+    this->setMinimumSize(width, height);
+
     setWindowTitle(tr("NINAGE"));
     setUnifiedTitleAndToolBarOnMac(true);
 
