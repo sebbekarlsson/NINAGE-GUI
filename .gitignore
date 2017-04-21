@@ -1,6 +1,7 @@
 .qmake.stash
 moc_*
 
+Makefile
 # swap
 [._]*.s[a-v][a-z]
 [._]*.sw[a-p]

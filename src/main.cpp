@@ -1,4 +1,4 @@
-#include <qt4/QtGui/QApplication>
+#include <QApplication>
 #include <QFileInfo>
 #include <string>
 #include "lib/ResourceManager/ResourceManager.h"
