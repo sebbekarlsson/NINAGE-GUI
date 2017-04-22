@@ -55,7 +55,7 @@ void NewProjectWindow::createActions() {
 void NewProjectWindow::selectLocation() {
     QString dir = QFileDialog::getExistingDirectory(
         this,
-        tr("Open Directory"),
+        "Open Directory",
         "/home",
         QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks
     );
