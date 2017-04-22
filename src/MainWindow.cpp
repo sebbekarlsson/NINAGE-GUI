@@ -19,20 +19,19 @@ MainWindow::MainWindow() {
     setWindowTitle(tr("NINAGE"));
     setUnifiedTitleAndToolBarOnMac(true);
 
-    BorderLayout *blayout = new BorderLayout;
-    QWidget *widget = new QWidget(this);
+    layout = new BorderLayout;
+    centralWidget = new QWidget(this);
 
-    blayout->addWidget(createLabel("Center"), BorderLayout::Center);
-    blayout->addWidget(createLabel("North"), BorderLayout::North);
-    blayout->addWidget(createLabel("West"), BorderLayout::West);
-    blayout->addWidget(createLabel("East 1"), BorderLayout::East);
-    blayout->addWidget(createLabel("East 2") , BorderLayout::East);
-    blayout->addWidget(createLabel("South"), BorderLayout::South);
+    layout->addWidget(createLabel("Center"), BorderLayout::Center);
+    layout->addWidget(createLabel("North"), BorderLayout::North);
+    layout->addWidget(createLabel("West"), BorderLayout::West);
+    layout->addWidget(createLabel("East 1"), BorderLayout::East);
+    layout->addWidget(createLabel("East 2") , BorderLayout::East);
+    layout->addWidget(createLabel("South"), BorderLayout::South);
 
-    widget->setLayout(blayout);
+    centralWidget->setLayout(layout);
     
-    this->setCentralWidget(widget);
-    
+    this->setCentralWidget(centralWidget);
     
     createActions();
     createMenus();

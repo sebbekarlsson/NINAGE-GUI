@@ -28,5 +28,6 @@ class MainWindow : public QMainWindow {
         QAction *file_newAct;
         QAction *file_openAct;
         BorderLayout *layout;
+        QWidget *centralWidget;
 };
 #endif
