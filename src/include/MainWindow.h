@@ -29,5 +29,10 @@ class MainWindow : public QMainWindow {
         QAction *file_openAct;
         BorderLayout *layout;
         QWidget *centralWidget;
+
+        QPushButton *north_playButton;
+        QPushButton *north_createObjectButton;
+        QPushButton *north_createSceneButton;
+        QPushButton *north_createSpriteButton;
 };
 #endif
