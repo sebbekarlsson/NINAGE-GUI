@@ -59,8 +59,8 @@ MainWindow::MainWindow() {
     layout->addWidget(createLabel("Center"), BorderLayout::Center);
     layout->addWidget(northWidget, BorderLayout::North);
     layout->addWidget(createLabel("West"), BorderLayout::West);
-    layout->addWidget(createLabel("East 1"), BorderLayout::East);
-    layout->addWidget(createLabel("East 2") , BorderLayout::East);
+    //layout->addWidget(createLabel("East"), BorderLayout::East);
+    //layout->addWidget(createLabel("East 2") , BorderLayout::East);
     layout->addWidget(createLabel("South"), BorderLayout::South);
 
     centralWidget->setLayout(layout);
