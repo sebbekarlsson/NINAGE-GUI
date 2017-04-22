@@ -60,6 +60,9 @@ void NewProjectWindow::selectLocation() {
         QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks
     );
 
+    if (dir == "" || dir == NULL)
+        return;
+
     this->projectLocationText->setText(dir);
 }
 
