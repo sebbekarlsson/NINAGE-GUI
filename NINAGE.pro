@@ -11,6 +11,9 @@ SOURCES += src/main.cpp
 SOURCES += ./src/lib/ResourceManager/ResourceManager.h
 SOURCES += ./src/lib/ResourceManager/ResourceManager.cpp
 
+HEADERS += ./src/include/BorderLayout.h
+SOURCES += ./src/BorderLayout.cpp
+
 HEADERS += ./src/include/MainWindow.h
 SOURCES += ./src/MainWindow.cpp
 

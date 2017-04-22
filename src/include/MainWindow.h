@@ -7,6 +7,7 @@
 #include <QMainWindow>
 #include <QTextEdit>
 #include <QListWidget>
+#include "BorderLayout.h"
 
 
 class MainWindow : public QMainWindow {
@@ -26,5 +27,6 @@ class MainWindow : public QMainWindow {
         QMenu *fileMenu;
         QAction *file_newAct;
         QAction *file_openAct;
+        BorderLayout *layout;
 };
 #endif

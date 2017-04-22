@@ -1,3 +1,5 @@
+vgcore.*
+
 .qmake.stash
 moc_*
 

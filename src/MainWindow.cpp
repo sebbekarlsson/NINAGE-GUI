@@ -2,6 +2,13 @@
 #include "include/NewProjectWindow.h"
 
 
+QLabel* createLabel(const QString &text)
+{
+    QLabel *label = new QLabel(text);
+    label->setFrameStyle(QFrame::Box | QFrame::Raised);
+    return label;
+}
+
 MainWindow::MainWindow() {
     int scale = 1;
     int width = (640) * scale;
@@ -12,6 +19,21 @@ MainWindow::MainWindow() {
     setWindowTitle(tr("NINAGE"));
     setUnifiedTitleAndToolBarOnMac(true);
 
+    BorderLayout *blayout = new BorderLayout;
+    QWidget *widget = new QWidget(this);
+
+    blayout->addWidget(createLabel("Center"), BorderLayout::Center);
+    blayout->addWidget(createLabel("North"), BorderLayout::North);
+    blayout->addWidget(createLabel("West"), BorderLayout::West);
+    blayout->addWidget(createLabel("East 1"), BorderLayout::East);
+    blayout->addWidget(createLabel("East 2") , BorderLayout::East);
+    blayout->addWidget(createLabel("South"), BorderLayout::South);
+
+    widget->setLayout(blayout);
+    
+    this->setCentralWidget(widget);
+    
+    
     createActions();
     createMenus();
 }
